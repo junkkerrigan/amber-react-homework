@@ -1,0 +1,78 @@
+.features {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  @include title(#eeeeee, $h-light-font);
+
+  &-title {
+    margin-top: 80px;
+
+    @media (max-width: $md) {
+      margin-top: 40px;
+    }
+  }
+
+  &-list {
+
+    li {
+      margin-top: 60px;
+      display: flex;
+
+      @media (max-width: $lg) {
+        justify-content: center;
+      }
+    }
+
+    .wrapper {
+      max-width: 360px;
+      margin-left: 40px;
+
+      @media (max-width: $md) {
+        margin-left: 20px;
+        max-width: 200px;
+      }
+    }
+
+    &-title {
+      color: black;
+      font: 300 24px/30px $font;
+    }
+
+    &-content {
+      color: $h-light-font;
+      font: 300 14px/24px $font;
+    }
+  }
+  .design::before {
+    content: "";
+    background: url("../img/brilliant.png");
+    width: 39px;
+    height: 39px;
+    display: block;
+  }
+
+  .on-mouse::before {
+    content: "";
+    background: url("../img/title.png");
+    width: 36px;
+    height: 33px;
+    display: block;
+  }
+
+  .documentation::before {
+    content: "";
+    background: url("../img/documentation.png");
+    width: 32px;
+    height: 32px;
+    display: block;
+  }
+
+  .responsive::before {
+    content: "";
+    background: url("../img/cloud.png");
+    width: 41px;
+    height: 26px;
+    display: block;
+  }
+}

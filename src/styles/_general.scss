@@ -1,0 +1,161 @@
+$font: Oxygen, Helvetica, Georgia, sans-serif;
+$font-secondary: Lato, Helvetica, Georgia, serif;
+
+$sm: 575px;
+$md: 767px;
+$lg: 991px;
+$xl: 1439px;
+
+$diameter: 200px;
+$accent: #fff;
+$gray: #35c8bc;
+$border: 5px;
+
+$fb-bg: #3b5998;
+$tw-bg: #00a0d1;
+$ytb-bg: #c4302b;
+$inst-bg: #825c48;
+$pin-bg: #a30834;
+
+$main-green: #02baab;
+$header-black: #85939f;
+$sep-light-bg: #eee;
+$h-light-font: #3b4954;
+$white: #fff;
+$black: #000;
+$content-quote: #c69c6d;
+$sidebar-title: #474d52;
+$highlighted: #6d0fae;
+$blog-borders: #edeeef;
+
+
+
+* {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+@mixin make-button($px, $py) {
+  background-color: transparent;
+  border: 2px solid $main-green;
+  font: 700 12px $font;
+  color: $main-green;
+  padding: $py $px;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  border-radius: 0;
+  transition: .5s;
+
+  &:hover {
+    background-color: $main-green;
+    border: 2px solid $main-green;
+  }
+}
+
+@mixin border-top($color) {
+  border-top: 10px solid $color;
+
+  &:hover {
+    background-color: $color;
+    transition: 1s;
+  }
+}
+
+@mixin border-top($color) {
+  border-top: 10px solid $color;
+
+  @media (max-width: $lg) {
+    border-left: 5px solid $color;
+    border-top: none;
+  }
+
+  &:hover {
+    background-color: $color;
+    transition: 1s;
+  }
+}
+
+@mixin separator($bg-color) {
+  &::after {
+    content: "";
+    display: block;
+    width: 50px;
+    border-bottom: 5px solid $bg-color;
+    margin: 20px auto 0;
+
+    @media (max-width: $sm) {
+      margin-top: 10px;
+    }
+  }
+}
+
+@mixin title($bg-color, $color) {
+  &-title {
+    color: $color;
+    font: 300 36px $font;
+    @include separator($bg-color);
+
+    @media (max-width: $sm) {
+      font: 300 30px $font;
+    }
+  }
+}
+
+@mixin make-progressbar($angle) {
+  .progressbar {
+    position: relative;
+    width: $diameter;
+    height: $diameter;
+    border-radius: 50%;
+    background-color: $accent;
+    &::before {
+      position: absolute;
+      content: '';
+      @if $angle > 180 {
+        background-color: $accent;
+      }
+      @if $angle <= 180 {
+        background-color: $gray;
+      }
+      width: $diameter;
+      height: $diameter;
+      border-radius: 50%;
+      clip: rect(0, #{$diameter/2}, $diameter, 0);
+      transform-origin: 50% 50%;
+      @if $angle <= 180 {
+        transform: rotate(#{180 + $angle}deg);
+      }
+      @if $angle > 180 {
+        transform: rotate(#{180 + $angle - 180}deg);
+      }
+      z-index: 1;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      background-color: $gray;
+      width: $diameter;
+      height: $diameter;
+      border-radius: 50%;
+      clip: rect(0, #{$diameter/2}, $diameter, 0);
+      transform-origin: 50% 50%;
+      transform: rotate(0deg);
+    }
+    .center {
+      position: absolute;
+      top: $border;
+      left: $border;
+      width: #{$diameter - 2 * $border};
+      height: #{$diameter - 2 * $border};
+      background-color: $main-green;
+      border-radius: 50%;
+      z-index: 2;
+    }
+  }
+}

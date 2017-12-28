@@ -1,0 +1,99 @@
+.team {
+  min-height: 100vh;
+
+  @include title($sep-light-bg, $h-light-font);
+
+  @media (max-width: $lg) {
+    padding: 50px 0;
+  }
+
+  &-wrapper {
+    border: 1px solid #eee;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    @media (max-width: $lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+
+  &-list {
+
+    margin-top: 50px;
+
+    .teammate-info {
+      border: 1px solid $sep-light-bg;
+      text-align: center;
+      background-color: $white;
+
+      &-name {
+        color: $main-green;
+        font: 400 14px/18px $font;
+        opacity: 1;
+        margin: 0;
+      }
+
+      &-position {
+        color: #c4c4c4;
+        font: 400 12px/18px $font;
+        opacity: 1;
+        margin: 0;
+      }
+
+    }
+
+    .slider-wrapper {
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+
+        .slider {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+
+        .teammate-info {
+          opacity: 0;
+        }
+      }
+    }
+
+    &-content {
+      color: $h-light-font;
+      font: 300 12px/24px $font;
+      text-align: center;
+    }
+  }
+
+  .slider {
+    position: absolute;
+    background-color: $white;
+    left: 0;
+    padding: 50px 20px 0;
+    transition: all 0.5s ease-out;
+    bottom: 0;
+    transform: translateY(0);
+
+    .teammate-info {
+      position: absolute;
+      top: -15%;
+      left: 50%;
+      transform: translate(-50%, -15%);
+      background-color: $white;
+      border: 1px solid #eee;
+      width: 136px;
+      padding: 8px 0;
+      transition: all 0.5s ease-out;
+    }
+  }
+
+  &-more {
+    @include make-button(40px, 15px);
+    margin: 30px 0;
+    align-self: center;
+  }
+}

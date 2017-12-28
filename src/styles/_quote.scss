@@ -1,0 +1,79 @@
+.quote {
+
+  min-height: 100vh;
+
+  .carousel {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+
+    &-control {
+      &-prev, &-next {
+        visibility: hidden;
+      }
+    }
+
+    &-item img {
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+
+  .carousel-indicators {
+    bottom: 25%;
+
+    @media (max-width: $sm) {
+      bottom: 20%;
+    }
+  }
+
+  .carousel-indicators li {
+
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: $white;
+
+    &:nth-child(n+1) {
+      margin-left: 10px;
+    }
+
+    &.active {
+      background-color: $main-green;
+    }
+  }
+
+  .container {
+    z-index: 1;
+  }
+
+  &-content {
+    color: $white;
+    font: 300 24px/30px $font;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    max-width: 650px;
+
+    &::before {
+      content: "";
+      background: url("../img/quotes.png");
+      width: 45px;
+      height: 37px;
+      display: block;
+      margin-bottom: 50px;
+    }
+  }
+
+  &-author {
+    color: $main-green;
+    font: 700 14px/18px Lato, serif;
+    text-transform: uppercase;
+
+    &::before {
+      content: "— ";
+    }
+  }
+
+}

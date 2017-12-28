@@ -1,0 +1,160 @@
+.works {
+  min-height: 100vh;
+
+  background: grey;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include title($white, $white);
+
+  &-title {
+    margin-top: 75px;
+    @media (max-width: $lg) {
+      margin-top: 50px;
+    }
+  }
+
+  &-content {
+    color: $white;
+    font: 300 18px/30px $font;
+    max-width: 740px;
+    margin: 50px 0;
+
+    @media (max-width: $sm) {
+      line-height: 25px;
+      margin: 30px 0;
+    }
+  }
+
+  &-list {
+
+    &-item {
+      position: relative;
+
+      @media (max-width: $lg) {
+
+        &:nth-child(n+1) {
+          margin-top: 20px;
+        }
+
+      }
+
+      .actions {
+        display: none;
+        align-self: center;
+        position: absolute;
+      }
+
+      .example {
+        object-fit: cover;
+      }
+
+      &:hover {
+
+        .works-list-data {
+          display: none;
+        }
+
+        .actions {
+          display: flex;
+          flex-direction: column;
+
+          .like, .more, .chain{
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: $main-green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .like, .more {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+    }
+
+    &-data {
+      align-self: flex-end;
+      position: absolute;
+      bottom: 20px;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 250px;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &-title {
+          color: $white;
+          font: 300 14px $font;
+          margin: 0 0 5px !important;
+        }
+
+        &-category {
+          color: $main-green;
+          font: 300 11px $font;
+          margin: 0 !important;
+        }
+      }
+
+      .likes {
+        &::before {
+          content: "";
+          background: url("../img/likes.png");
+          display: block;
+          width: 14px;
+          height: 12px;
+          margin-bottom: 5px;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        color: $main-green;
+        font: 300 11px $font;
+      }
+    }
+  }
+
+  .control {
+    button {
+      background: none;
+      border: none;
+
+      &:first-child {
+        margin-right: 35px;
+      }
+    }
+    margin-bottom: 75px;
+
+    @media (max-width: $lg) {
+      display: none;
+      margin-bottom: 50px;
+    }
+
+  }
+
+  .resp-more {
+    display: none;
+    @include make-button(15px,15px);
+    margin-bottom: 75px;
+
+    @media (max-width: $lg) {
+      display: block;
+      margin-bottom: 50px;
+    }
+  }
+}

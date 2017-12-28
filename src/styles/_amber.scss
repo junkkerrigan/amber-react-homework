@@ -1,0 +1,47 @@
+.amber {
+
+  background-color: $main-green;
+  padding: 50px 0;
+
+  .container {
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $lg) {
+      flex-direction: column;
+    }
+  }
+
+
+  &-title {
+    color: $white;
+    font: 300 24px $font;
+  }
+
+  &-purchase {
+    border: 2px solid $white;
+    color: $white;
+    display: flex;
+    align-items: center;
+    background-color: $main-green;
+    border-radius: 0;
+    text-transform: uppercase;
+    font: 700 12px $font;
+    margin-left: 60px;
+    padding: 10px;
+
+    &:hover {
+      background: inherit;
+      border: 2px solid $white;
+    }
+
+    @media (max-width: $lg) {
+      margin: 20px 0 0;
+    }
+
+    img {
+      margin-left: 20px;
+    }
+  }
+
+}
