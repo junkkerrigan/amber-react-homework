@@ -314,17 +314,13 @@ a, button {
       .works-list-item:nth-child(n+1) {
         margin-top: 20px; } }
     .works-list-item .actions {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      transition: .5s;
       align-self: center;
       position: absolute; }
-    .works-list-item .example {
-      object-fit: cover; }
-    .works-list-item:hover .works-list-data {
-      display: none; }
-    .works-list-item:hover .actions {
-      display: flex;
-      flex-direction: column; }
-      .works-list-item:hover .actions .like, .works-list-item:hover .actions .more, .works-list-item:hover .actions .chain {
+      .works-list-item .actions .like, .works-list-item .actions .more, .works-list-item .actions .chain {
         border: none;
         width: 40px;
         height: 40px;
@@ -333,8 +329,14 @@ a, button {
         display: flex;
         justify-content: center;
         align-items: center; }
-      .works-list-item:hover .actions .like, .works-list-item:hover .actions .more {
+      .works-list-item .actions .like, .works-list-item .actions .more {
         margin-bottom: 10px; }
+    .works-list-item .example {
+      object-fit: cover; }
+    .works-list-item:hover .works-list-data {
+      opacity: 0; }
+    .works-list-item:hover .actions {
+      opacity: 1; }
   .works-list-data {
     align-self: flex-end;
     position: absolute;
@@ -343,7 +345,9 @@ a, button {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 250px; }
+    width: 250px;
+    opacity: 1;
+    transition: .5s; }
     .works-list-data .info {
       display: flex;
       flex-direction: column;
