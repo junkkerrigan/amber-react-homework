@@ -60,15 +60,8 @@ a, button {
 
 @mixin border-top($color) {
   border-top: 10px solid $color;
-
-  &:hover {
-    background-color: $color;
-    transition: 1s;
-  }
-}
-
-@mixin border-top($color) {
-  border-top: 10px solid $color;
+  transition: .7s;
+  background-color: inherit;
 
   @media (max-width: $lg) {
     border-left: 5px solid $color;
@@ -77,7 +70,6 @@ a, button {
 
   &:hover {
     background-color: $color;
-    transition: 1s;
   }
 }
 

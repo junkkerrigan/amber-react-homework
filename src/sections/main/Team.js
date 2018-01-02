@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import teammate1 from '../img/teammate-1.jpg';
-import teammate2 from '../img/teammate-2.jpg';
-import teammate3 from '../img/teammate-3.jpg';
-import teammate4 from '../img/teammate-4.jpg';
+import teammate1 from '../../img/teammate-1.jpg';
+import teammate2 from '../../img/teammate-2.jpg';
+import teammate3 from '../../img/teammate-3.jpg';
+import teammate4 from '../../img/teammate-4.jpg';
 
 class Slider extends Component {
     render() {

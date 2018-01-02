@@ -1,0 +1,118 @@
+.main-header {
+
+  background: url("../../img/blog-grid-bg.jpg") 100% 100% no-repeat;
+  background-size: cover;
+  margin-top: 80px;
+  padding: 170px 0 50px;
+
+  @media (max-width: $md) {
+    padding: 50px 0 20px;
+  }
+
+  &-title {
+    color: $white;
+    font: 300 36px $font;
+    margin-bottom: 20px;
+  }
+
+  &-wrapper {
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $md) {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  .page {
+
+    &-data {
+      font: 300 12px $font;
+      color: #85939f;
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+        @media (max-width: $md) {
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: $md) {
+        margin-top: 20px;
+        flex-direction: column;
+      }
+    }
+
+    &-author {
+
+      &::before {
+        content: "\f007";
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        margin-right: 10px;
+        padding: 3px 5px;
+        border-radius: 50%;
+        background-color: $h-light-font;
+        color: #c3c3c3;
+      }
+    }
+
+    &-date {
+
+      &::before {
+        content: "\f017";
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        margin-right: 10px;
+        padding: 3px 5px;
+        border-radius: 50%;
+        background-color: $h-light-font;
+        color: #c3c3c3;
+      }
+    }
+
+    &-comments-n {
+
+      &::before {
+        content: "\f10d";
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        margin-right: 10px;
+        padding: 3px 5px;
+        border-radius: 50%;
+        background-color: $h-light-font;
+        color: #c3c3c3;
+      }
+    }
+  }
+
+  &-navigation {
+
+    li:nth-child(1n+2)::before {
+      content: "/";
+      color: #85939f;
+      font: 400 12px $font;
+      margin: 0 10px;
+    }
+
+    .navigation-item {
+      color: #85939f;
+      font: 400 12px $font;
+
+      &:hover {
+        text-decoration: none;
+        color: #85939f;
+      }
+    }
+  }
+}

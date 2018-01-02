@@ -1,57 +1,71 @@
 import React, { Component } from 'react';
 
-import './styles/App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import FixedHeader from './sections/Header';
+import './styles/main/App.css';
 
-import Welcome from './sections/Welcome';
+import FixedHeader from './sections/main/FixedHeader';
 
-import Steal from "./sections/Steal";
+import Welcome from './sections/main/Welcome';
 
-import Works from "./sections/Works";
+import Steal from "./sections/main/Steal";
 
-import Amber from "./sections/Amber";
+import Works from "./sections/main/Works";
 
-import Features from "./sections/Features";
+import Amber from "./sections/main/Amber";
 
-import Quote from "./sections/Quote";
+import Features from "./sections/main/Features";
 
-import Blog from "./sections/Blog";
+import Quote from "./sections/main/Quote";
 
-import Progress from "./sections/Progress";
+import Blog from "./sections/main/Blog";
 
-import Team from "./sections/Team";
+import Progress from "./sections/main/Progress";
 
-import Footer from "./sections/Footer";
+import Team from "./sections/main/Team";
+
+import Footer from "./sections/main/Footer";
+
+import SubpageHeader from "./sections/blog-grid/SubpageHeader";
+
+import BlogGridMain from "./sections/blog-grid/BlogGridMain";
 
 class App extends Component {
   render() {
     return (
-        <div className="wrapper">
+        <Router>
 
-            <FixedHeader/>
+            <div>
 
-            <Welcome/>
+                <Route path='/' component={FixedHeader}/>
 
-            <Steal/>
+                <Route exact path='/blog-grid' component={SubpageHeader} />
 
-            <Works/>
+                <Route exact path='/blog-grid' component={BlogGridMain}/>
 
-            <Amber/>
+                <Route exact path='/' component={Welcome}/>
 
-            <Features/>
+                <Route exact path='/' component={Steal}/>
 
-            <Quote/>
+                <Route exact path='/' component={Works}/>
 
-            <Blog/>
+                <Route exact path='/' component={Amber}/>
 
-            <Progress/>
+                <Route exact path='/' component={Features}/>
 
-            <Team/>
+                <Route exact path='/' component={Quote}/>
 
-            <Footer/>
+                <Route exact path='/' component={Blog}/>
 
-        </div>
+                <Route exact path='/' component={Progress}/>
+
+                <Route exact path='/' component={Team}/>
+
+                <Route path='/' component={Footer}/>
+
+            </div>
+
+        </Router>
     );
   }
 }

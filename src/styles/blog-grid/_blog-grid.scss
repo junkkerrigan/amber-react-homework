@@ -1,0 +1,53 @@
+.fixed-header-bg {
+  background-color: #666666!important;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+.blog {
+
+  &-list {
+    &-item {
+      margin-bottom: 30px;
+    }
+    margin-top: 0;
+  }
+
+  &-border {
+    margin-top: 0;
+  }
+
+}
+
+.pagination {
+
+  .page {
+
+    &-link {
+      border: none;
+      color: $main-green;
+      font: 400 14px $font;
+      border-radius: 0!important;
+
+      &:hover {
+        color: $highlighted;
+        background-color: transparent;
+      }
+
+      &.current {
+        background-color: $sep-light-bg;
+        color: $h-light-font;
+      }
+
+
+
+    }
+
+  }
+}
+
+
+
+

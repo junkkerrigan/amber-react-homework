@@ -43,7 +43,7 @@ a, button {
       content: "";
       width: 14px;
       height: 13px;
-      background: url("../img/login-icon.png");
+      background: url("../../img/login-icon.png");
       margin-right: 5px; }
     .fixed-header-login:hover {
       color: #85939f;
@@ -58,7 +58,7 @@ a, button {
       content: "";
       width: 14px;
       height: 14px;
-      background: url("../img/register-icon.png");
+      background: url("../../img/register-icon.png");
       margin-right: 5px; }
     .fixed-header-register:hover {
       color: #85939f;
@@ -108,68 +108,75 @@ a, button {
         .fixed-header .navbar .nav-link {
           color: #02baab; } }
   .fixed-header .home {
-    border-top: 10px solid #ffae00; }
+    border-top: 10px solid #ffae00;
+    transition: .7s;
+    background-color: inherit; }
     @media (max-width: 991px) {
       .fixed-header .home {
         border-left: 5px solid #ffae00;
         border-top: none; } }
     .fixed-header .home:hover {
-      background-color: #ffae00;
-      transition: 1s; }
+      background-color: #ffae00; }
   .fixed-header .typography {
-    border-top: 10px solid #fc7100; }
+    border-top: 10px solid #fc7100;
+    transition: .7s;
+    background-color: inherit; }
     @media (max-width: 991px) {
       .fixed-header .typography {
         border-left: 5px solid #fc7100;
         border-top: none; } }
     .fixed-header .typography:hover {
-      background-color: #fc7100;
-      transition: 1s; }
+      background-color: #fc7100; }
   .fixed-header .blogposts {
-    border-top: 10px solid #e51c5e; }
+    border-top: 10px solid #e51c5e;
+    transition: .7s;
+    background-color: inherit; }
     @media (max-width: 991px) {
       .fixed-header .blogposts {
         border-left: 5px solid #e51c5e;
         border-top: none; } }
     .fixed-header .blogposts:hover {
-      background-color: #e51c5e;
-      transition: 1s; }
+      background-color: #e51c5e; }
   .fixed-header .pages {
-    border-top: 10px solid #ae0f8d; }
+    border-top: 10px solid #ae0f8d;
+    transition: .7s;
+    background-color: inherit; }
     @media (max-width: 991px) {
       .fixed-header .pages {
         border-left: 5px solid #ae0f8d;
         border-top: none; } }
     .fixed-header .pages:hover {
-      background-color: #ae0f8d;
-      transition: 1s; }
+      background-color: #ae0f8d; }
   .fixed-header .elements {
-    border-top: 10px solid #6d0fae; }
+    border-top: 10px solid #6d0fae;
+    transition: .7s;
+    background-color: inherit; }
     @media (max-width: 991px) {
       .fixed-header .elements {
         border-left: 5px solid #6d0fae;
         border-top: none; } }
     .fixed-header .elements:hover {
-      background-color: #6d0fae;
-      transition: 1s; }
+      background-color: #6d0fae; }
   .fixed-header .eccomerse {
-    border-top: 10px solid #33227a; }
+    border-top: 10px solid #33227a;
+    transition: .7s;
+    background-color: inherit; }
     @media (max-width: 991px) {
       .fixed-header .eccomerse {
         border-left: 5px solid #33227a;
         border-top: none; } }
     .fixed-header .eccomerse:hover {
-      background-color: #33227a;
-      transition: 1s; }
+      background-color: #33227a; }
   .fixed-header .menu {
-    border-top: 10px solid #0c8fcc; }
+    border-top: 10px solid #0c8fcc;
+    transition: .7s;
+    background-color: inherit; }
     @media (max-width: 991px) {
       .fixed-header .menu {
         border-left: 5px solid #0c8fcc;
         border-top: none; } }
     .fixed-header .menu:hover {
-      background-color: #0c8fcc;
-      transition: 1s; }
+      background-color: #0c8fcc; }
 
 .welcome {
   min-height: 100vh;
@@ -368,7 +375,7 @@ a, button {
       font: 300 11px Oxygen, Helvetica, Georgia, sans-serif; }
       .works-list-data .likes::before {
         content: "";
-        background: url("../img/likes.png");
+        background: url("../../img/likes.png");
         display: block;
         width: 14px;
         height: 12px;
@@ -481,25 +488,25 @@ a, button {
     font: 300 14px/24px Oxygen, Helvetica, Georgia, sans-serif; }
   .features .design::before {
     content: "";
-    background: url("../img/brilliant.png");
+    background: url("../../img/brilliant.png");
     width: 39px;
     height: 39px;
     display: block; }
   .features .on-mouse::before {
     content: "";
-    background: url("../img/title.png");
+    background: url("../../img/title.png");
     width: 36px;
     height: 33px;
     display: block; }
   .features .documentation::before {
     content: "";
-    background: url("../img/documentation.png");
+    background: url("../../img/documentation.png");
     width: 32px;
     height: 32px;
     display: block; }
   .features .responsive::before {
     content: "";
-    background: url("../img/cloud.png");
+    background: url("../../img/cloud.png");
     width: 41px;
     height: 26px;
     display: block; }
@@ -541,7 +548,7 @@ a, button {
     max-width: 650px; }
     .quote-content::before {
       content: "";
-      background: url("../img/quotes.png");
+      background: url("../../img/quotes.png");
       width: 45px;
       height: 37px;
       display: block;
@@ -1034,6 +1041,111 @@ a, button {
         text-decoration: none; }
         .footer footer .go-top:hover i {
           text-decoration: none; }
+
+.main-header {
+  background: url("../../img/blog-grid-bg.jpg") 100% 100% no-repeat;
+  background-size: cover;
+  margin-top: 80px;
+  padding: 170px 0 50px; }
+  @media (max-width: 767px) {
+    .main-header {
+      padding: 50px 0 20px; } }
+  .main-header-title {
+    color: #fff;
+    font: 300 36px Oxygen, Helvetica, Georgia, sans-serif;
+    margin-bottom: 20px; }
+  .main-header-wrapper {
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 767px) {
+      .main-header-wrapper {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start; } }
+  .main-header .page-data {
+    font: 300 12px Oxygen, Helvetica, Georgia, sans-serif;
+    color: #85939f; }
+    .main-header .page-data li {
+      display: flex;
+      align-items: center;
+      margin-right: 30px; }
+      @media (max-width: 767px) {
+        .main-header .page-data li {
+          margin-top: 20px; } }
+    @media (max-width: 767px) {
+      .main-header .page-data {
+        margin-top: 20px;
+        flex-direction: column; } }
+  .main-header .page-author::before {
+    content: "\f007";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 10px;
+    padding: 3px 5px;
+    border-radius: 50%;
+    background-color: #3b4954;
+    color: #c3c3c3; }
+  .main-header .page-date::before {
+    content: "\f017";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 10px;
+    padding: 3px 5px;
+    border-radius: 50%;
+    background-color: #3b4954;
+    color: #c3c3c3; }
+  .main-header .page-comments-n::before {
+    content: "\f10d";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 10px;
+    padding: 3px 5px;
+    border-radius: 50%;
+    background-color: #3b4954;
+    color: #c3c3c3; }
+  .main-header-navigation li:nth-child(1n+2)::before {
+    content: "/";
+    color: #85939f;
+    font: 400 12px Oxygen, Helvetica, Georgia, sans-serif;
+    margin: 0 10px; }
+  .main-header-navigation .navigation-item {
+    color: #85939f;
+    font: 400 12px Oxygen, Helvetica, Georgia, sans-serif; }
+    .main-header-navigation .navigation-item:hover {
+      text-decoration: none;
+      color: #85939f; }
+
+.fixed-header-bg {
+  background-color: #666666 !important; }
+
+ul {
+  margin-bottom: 0; }
+
+.blog-list {
+  margin-top: 0; }
+  .blog-list-item {
+    margin-bottom: 30px; }
+
+.blog-border {
+  margin-top: 0; }
+
+.pagination .page-link {
+  border: none;
+  color: #02baab;
+  font: 400 14px Oxygen, Helvetica, Georgia, sans-serif;
+  border-radius: 0 !important; }
+  .pagination .page-link:hover {
+    color: #6d0fae;
+    background-color: transparent; }
+  .pagination .page-link.current {
+    background-color: #eee;
+    color: #3b4954; }
 
 /*.App {
   text-align: center;

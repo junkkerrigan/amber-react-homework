@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import search from '../img/search-button.png';
+import search from '../../img/search-button.png';
 
-import mainLogo from '../img/main-logo.png';
+import mainLogo from '../../img/main-logo.png';
 
 class SearchForm extends Component {
     render() {
@@ -57,7 +57,7 @@ class Toggler extends Component {
     render() {
         return (
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <i className="fa fa-2x fa-bars"></i>
+                <i className="fa fa-2x fa-bars"/>
             </button>
         );
     }
@@ -92,11 +92,11 @@ class Navigation extends Component {
         return (
             <ul className="navbar-nav d-flex">
 
-                <NavigationItem dir="main.html#home" txt="home" cls="nav-item home"/>
+                <NavigationItem dir="/" txt="home" cls="nav-item home"/>
 
                 <NavigationItem dir="#" txt="typography" cls="nav-item typography"/>
 
-                <NavigationItem dir="blog-grid.html#blog-grid" txt="blog" cls="nav-item blogposts"/>
+                <NavigationItem dir="/blog-grid" txt="blog" cls="nav-item blogposts"/>
 
                 <NavigationItem dir="#" txt="pages" cls="nav-item pages"/>
 

@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 
-import like from '../img/action-like.png';
+import like from '../../img/action-like.png';
 
-import more from '../img/action-more.png';
+import more from '../../img/action-more.png';
 
-import chain from '../img/action-chain.png';
+import chain from '../../img/action-chain.png';
 
-import work1 from '../img/work-1.jpg';
+import work1 from '../../img/work-1.jpg';
 
-import work2 from '../img/work-2.jpg';
+import work2 from '../../img/work-2.jpg';
 
-import work3 from '../img/work-3.jpg';
+import work3 from '../../img/work-3.jpg';
 
-import back from '../img/back.png';
+import back from '../../img/back.png';
 
-import forward from '../img/forward.png';
+import forward from '../../img/forward.png';
+
+import map from 'lodash/map';
 
 class WorkItemData extends Component {
     render() {
@@ -83,19 +85,38 @@ class WorksList extends Component {
         return (
             <ul className="works-list row">
 
-                <WorkItem imgSrc={work1} workTitle="Lindemans Wine" category="Art Direction, Web Design"/>
-
-                <WorkItem imgSrc={work2} workTitle="Lindemans Wine" category="Art Direction, Web Design"/>
-
-                <WorkItem imgSrc={work3} workTitle="Marketing materials and branding" category="Photography, Web Design"/>
+                {
+                    map(this.props.worksData, (item,index) => {
+                        console.log(item.image);
+                        return <WorkItem imgSrc={item.image} workTitle={item.name} category={item.category}/>
+                    })
+                }
 
             </ul>
         );
     }
 }
 
+
 class Works extends Component {
     render() {
+        const dataList = [
+            {
+                image: work1,
+                name: 'Lindemans Wine',
+                category: 'Art Direction, Web Design'
+            },
+            {
+                image: work2,
+                name: 'Lindemans Wine',
+                category: 'Art Direction, Web Design'
+            },
+            {
+                image: work3,
+                name: 'Marketing materials and branding',
+                category: 'Photography, Web Design'
+            }
+        ];
         return (
             <section className="works">
 
@@ -109,7 +130,7 @@ class Works extends Component {
                         at once unique and universal.
                     </p>
 
-                    <WorksList/>
+                    <WorksList worksData={dataList}/>
 
                     <div className="control">
 
