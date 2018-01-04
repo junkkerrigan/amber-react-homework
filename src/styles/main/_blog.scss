@@ -35,7 +35,7 @@
       flex-direction: column;
 
       &:hover {
-        .blog-list-title, .learn-more, .comments i {
+        .blog-list-title, .learn-more, .blog-list-comments i {
           color: #6d0fae;
         }
       }
@@ -76,7 +76,7 @@
         }
       }
 
-      .comments {
+      .blog-list-comments {
         font: 300 14px $font;
         color: $h-light-font;
 

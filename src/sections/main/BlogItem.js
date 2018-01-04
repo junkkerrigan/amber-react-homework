@@ -9,26 +9,26 @@ class BlogItem extends Component {
 
                     <img src={this.props.number} width="290" height="220"/>
 
-                    <h3 className="blog-list-title">
-                        Runway to Red Carpet: Awards Season
-                    </h3>
+                        <h3 className="blog-list-title">
+                            Runway to Red Carpet: Awards Season
+                        </h3>
 
-                    <p className="blog-list-content">
-                        Her father worked on oil rigs and farms that
-                        through most of the Depression. But it is a new
-                        story that has seared into my genetic.
-                    </p>
+                        <p className="blog-list-content">
+                            Her father worked on oil rigs and farms that
+                            through most of the Depression. But it is a new
+                            story that has seared into my genetic.
+                        </p>
 
-                    <div className="blog-list-full">
+                        <div className="blog-list-full">
 
-                        <a href="blog-single" className="learn-more">Learn more</a>
+                            <a href="blog-grid/item" className="learn-more">Learn more</a>
 
-                        <span className="comments">
+                            <span className="blog-list-comments">
                                 <i className="fa fa-comments"/>
                                 450
                             </span>
 
-                    </div>
+                        </div>
 
                 </div>
 

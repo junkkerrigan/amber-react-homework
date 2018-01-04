@@ -1,0 +1,160 @@
+.content-sidebar {
+
+  padding-top: 50px;
+
+  @media (max-width: $lg) {
+    display: none;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  .sidebar-title {
+    color: $sidebar-title;
+    font: 700 18px $font;
+    margin-bottom: 20px;
+  }
+
+  .categories {
+
+    margin-bottom: 40px;
+
+    &-item {
+      padding: 15px 40px 15px 0;
+      border-bottom: 1px solid $blog-borders;
+
+      &:first-of-type {
+        padding-top: 0;
+      }
+
+      &:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+
+    &-link {
+      color: $main-green;
+      font: 300 12px $font;
+      display: flex;
+
+      &:hover {
+        color: $highlighted;
+        text-decoration: none;
+      }
+
+      &::before {
+        content: "";
+        background: url("../../img/categories-flag.png");
+        width: 14px;
+        height: 11px;
+        display: block;
+        margin: 2px 15px 0 0;
+
+      }
+    }
+
+  }
+
+  .rcomments {
+
+    margin-bottom: 70px;
+
+    &-item {
+      border-bottom: 1px solid $blog-borders;
+      padding: 15px 0;
+
+      &:last-of-type {
+        border: none;
+        padding-bottom: 0;
+      }
+
+      &:first-of-type {
+        padding-top: 0;
+      }
+
+      font: 300 12px/18px $font;
+    }
+
+    &-author {
+      color: $h-light-font;
+      display: flex;
+
+      &::before {
+        content: "\f10d";
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        color: #c3c3c3;
+        margin: 3px 15px 0 0;
+      }
+
+      &::after {
+        content: "on";
+        margin-left: 3px;
+      }
+    }
+
+    &-target {
+      color: $main-green;
+      margin-left: 26px;
+      display: block;
+
+      &:hover {
+        color: $main-green;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .works {
+
+    margin-bottom: 50px;
+
+    &-control {
+      margin-top: 20px;
+      width: 210px;
+
+      button {
+        background: none;
+        border: none;
+
+        &:last-of-type {
+          margin-left: 30px;
+        }
+      }
+
+      i {
+        color: $main-green;
+      }
+    }
+  }
+
+  .tag-cloud {
+
+    &-item {
+      border: 1px solid $sep-light-bg;
+      margin: 0 5px 5px 0;
+      padding: 0 7px 3px;
+
+      &:hover {
+        border: 1px solid $main-green;
+        background-color: $main-green;
+
+        .tag-cloud-link {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+
+    }
+
+    &-link {
+      font: 300 12px $font;
+      color: $main-green;
+    }
+  }
+
+}

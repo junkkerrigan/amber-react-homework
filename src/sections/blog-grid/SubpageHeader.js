@@ -28,7 +28,7 @@ class SubpageHeader extends Component {
 
                 <div className="container">
 
-                    <h2 className="main-header-title">Blog grid view</h2>
+                    <h2 className="main-header-title">{this.props.title}</h2>
 
                     <div className="main-header-wrapper d-flex">
 

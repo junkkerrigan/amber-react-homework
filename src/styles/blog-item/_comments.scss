@@ -1,0 +1,166 @@
+.comments {
+
+  &-wrapper {
+    background-color: #ebf0f3;
+  }
+
+  padding-bottom: 100px;
+
+  .ncomment-form {
+
+    position: relative;
+
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
+
+    margin: 40px -10px 120px -10px;
+
+    &-title {
+      font: 700 18px $font;
+      color: $h-light-font;
+      margin-bottom: 30px;
+    }
+
+    label {
+      padding: 0 10px 0 10px;
+      color: $h-light-font;
+      font: 400 14px $font;
+
+      .little {
+        font-size: 12px
+      }
+
+      &.message-label {
+        margin-top: 25px;
+      }
+    }
+
+    input, textarea {
+      display: block;
+      width: 100%;
+      box-shadow: 0 -1px 0 #9eb9c9;
+      border: none;
+      background-color: $white;
+      margin-top: 10px;
+    }
+
+    input {
+      height: 40px;
+    }
+
+    textarea {
+      min-height: 110px;
+      max-height: 110px;
+    }
+
+    &-submit {
+      @include make-button(20px, 15px);
+      position: absolute;
+      right: 10px;
+
+      bottom: -70px;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  .ocomments {
+
+    &-reply {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      border: none;
+      background: none;
+      color: $main-green;
+      font: 700 14px $font;
+      display: none;
+    }
+
+    &-title {
+      font: 700 18px $font;
+      color: $h-light-font;
+      margin-bottom: 30px;
+    }
+
+    &-item {
+      border: 5px solid $white;
+      background-color: #ffffff;
+      padding: 30px;
+      position: relative;
+      margin-bottom: 30px;
+
+      &:hover {
+        border: 5px solid #dee7ed;
+
+        .ocomments-reply {
+          display: inline-block;
+        }
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &.answer {
+        margin-left: 30px;
+      }
+
+      &-data {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $blog-borders;
+
+        .ocomment {
+
+          &-author {
+            color: $main-green;
+            font: 700 14px $font;
+
+            &:hover {
+              color: $main-green;
+              text-decoration: none;
+            }
+          }
+
+          &-datetime {
+            font: 300 12px $font;
+            color: #85939f;
+            margin-top: 10px;
+
+            span:first-of-type::after {
+              content: "@";
+              font: 300 12px $font;
+              color: #85939f;
+            }
+
+          }
+
+        }
+
+      }
+
+      &-content {
+        color: $h-light-font;
+        font: 300 12px/24px $font;
+        padding-right: 30px;
+
+        @media (max-width: $md) {
+          padding: 0;
+        }
+        margin: 0;
+      }
+
+    }
+
+  }
+
+}

@@ -42,7 +42,7 @@ class BlogGridMain extends Component {
 
                         {
                             map(imageList, (item, index) => {
-                                return <BlogItem number={item}/>;
+                                return <BlogItem number={item}/>
                             })
                         }
 

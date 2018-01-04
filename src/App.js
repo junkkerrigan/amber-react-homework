@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-
 import './styles/main/App.css';
 
 import FixedHeader from './sections/main/FixedHeader';
@@ -30,16 +28,28 @@ import SubpageHeader from "./sections/blog-grid/SubpageHeader";
 
 import BlogGridMain from "./sections/blog-grid/BlogGridMain";
 
+import { Router, Route } from 'react-router-dom'
+
+import createBrowserHistory from 'history/createBrowserHistory';
+
+const curHistory=createBrowserHistory();
+
 class App extends Component {
   render() {
     return (
-        <Router>
+        <Router history={curHistory}>
 
             <div>
 
                 <Route path='/' component={FixedHeader}/>
 
-                <Route exact path='/blog-grid' component={SubpageHeader} />
+                <Route exact path='/blog-grid' render={ () => <SubpageHeader
+                title='Blog grid view'/>} />
+
+                <Route strict path='/blog-grid/' render={ () => <SubpageHeader
+                    title='Blog post title goes here'/>} />
+
+
 
                 <Route exact path='/blog-grid' component={BlogGridMain}/>
 
