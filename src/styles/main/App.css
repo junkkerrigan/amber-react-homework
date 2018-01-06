@@ -1219,37 +1219,36 @@ ul {
         text-decoration: none;
         color: #6d0fae; }
 
-.related-title {
-  color: #474d52;
-  font: 700 18px Oxygen, Helvetica, Georgia, sans-serif;
-  margin-bottom: 25px; }
-
-.related-item::before {
-  content: "\f11c";
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  margin-right: 10px;
-  color: #c3c3c3;
-  display: block;
-  margin-bottom: 15px; }
-
-@media (max-width: 767px) {
-  .related-item {
-    margin-bottom: 20px; } }
-
-.related-date {
-  font: 300 12px/18px Oxygen, Helvetica, Georgia, sans-serif;
-  color: #3b4954; }
-
-.related-link {
-  display: block;
-  color: #02baab;
-  font: 300 12px/18px Oxygen, Helvetica, Georgia, sans-serif; }
-  .related-link:hover {
+.related {
+  margin-top: 50px;
+  padding-bottom: 50px; }
+  .related-title {
+    color: #474d52;
+    font: 700 18px Oxygen, Helvetica, Georgia, sans-serif;
+    margin-bottom: 25px; }
+  .related-item::before {
+    content: "\f11c";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 10px;
+    color: #c3c3c3;
+    display: block;
+    margin-bottom: 15px; }
+  @media (max-width: 767px) {
+    .related-item {
+      margin-bottom: 20px; } }
+  .related-date {
+    font: 300 12px/18px Oxygen, Helvetica, Georgia, sans-serif;
+    color: #3b4954; }
+  .related-link {
+    display: block;
     color: #02baab;
-    text-decoration: none; }
+    font: 300 12px/18px Oxygen, Helvetica, Georgia, sans-serif; }
+    .related-link:hover {
+      color: #02baab;
+      text-decoration: none; }
 
 .comments {
   padding-bottom: 100px; }
@@ -1309,11 +1308,13 @@ ul {
     position: absolute;
     right: 30px;
     top: 30px;
-    border: none;
     background: none;
     color: #02baab;
     font: 700 14px Oxygen, Helvetica, Georgia, sans-serif;
-    display: none; }
+    display: inline-block;
+    opacity: 0;
+    transition: .5s;
+    border: 5px solid white; }
   .comments .ocomments-title {
     font: 700 18px Oxygen, Helvetica, Georgia, sans-serif;
     color: #3b4954;
@@ -1327,7 +1328,7 @@ ul {
     .comments .ocomments-item:hover {
       border: 5px solid #dee7ed; }
       .comments .ocomments-item:hover .ocomments-reply {
-        display: inline-block; }
+        opacity: 1; }
     .comments .ocomments-item:last-of-type {
       margin-bottom: 0; }
     .comments .ocomments-item.answer {
@@ -1426,17 +1427,17 @@ ul {
       .content-sidebar .rcomments-target:hover {
         color: #02baab;
         text-decoration: none; }
-  .content-sidebar .works {
+  .content-sidebar .latest-works {
     margin-bottom: 50px; }
-    .content-sidebar .works-control {
+    .content-sidebar .latest-works-control {
       margin-top: 20px;
       width: 210px; }
-      .content-sidebar .works-control button {
+      .content-sidebar .latest-works-control button {
         background: none;
         border: none; }
-        .content-sidebar .works-control button:last-of-type {
+        .content-sidebar .latest-works-control button:last-of-type {
           margin-left: 30px; }
-      .content-sidebar .works-control i {
+      .content-sidebar .latest-works-control i {
         color: #02baab; }
   .content-sidebar .tag-cloud-item {
     border: 1px solid #eee;

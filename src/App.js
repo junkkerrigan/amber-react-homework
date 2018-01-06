@@ -28,6 +28,14 @@ import SubpageHeader from "./sections/blog-grid/SubpageHeader";
 
 import BlogGridMain from "./sections/blog-grid/BlogGridMain";
 
+import RelatedPosts from "./sections/blog-item/RelatedPosts";
+
+import Article from "./sections/blog-item/Article";
+
+import Sidebar from "./sections/blog-item/Sidebar";
+
+import Comments from "./sections/blog-item/Comments";
+
 import { Router, Route } from 'react-router-dom'
 
 import createBrowserHistory from 'history/createBrowserHistory';
@@ -49,7 +57,34 @@ class App extends Component {
                 <Route strict path='/blog-grid/' render={ () => <SubpageHeader
                     title='Blog post title goes here'/>} />
 
+                <Route strict path='/blog-grid/' render={ () =>
 
+                    <div className="d-flex flex-column align-items-center">
+
+                        <div className="container row justify-content-center">
+
+                            <Route path='/' component={Article} />
+
+                            <Route path='/' component={Sidebar} />
+
+                        </div>
+
+                        <Route path='/' component={RelatedPosts} />
+
+                    </div>
+
+                }/>
+
+                <Route strict path='/blog-grid/' render={ () =>
+
+                    <div className="comments-wrapper d-flex flex-column align-items-center">
+
+                        <Route path='/' component={Comments}/>
+
+                    </div>
+
+
+                } />
 
                 <Route exact path='/blog-grid' component={BlogGridMain}/>
 
