@@ -315,71 +315,73 @@ a, button {
       .works-content {
         line-height: 25px;
         margin: 30px 0; } }
-  .works-list-item {
-    position: relative; }
-    @media (max-width: 991px) {
-      .works-list-item:nth-child(n+1) {
-        margin-top: 20px; } }
-    .works-list-item .actions {
-      display: flex;
-      flex-direction: column;
-      opacity: 0;
-      transition: .5s;
-      align-self: center;
-      position: absolute; }
-      .works-list-item .actions .like, .works-list-item .actions .more, .works-list-item .actions .chain {
-        border: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 20px;
-        background-color: #02baab;
+  .works-list {
+    margin-bottom: 20px; }
+    .works-list-item {
+      position: relative; }
+      @media (max-width: 991px) {
+        .works-list-item:nth-child(n+1) {
+          margin-top: 20px; } }
+      .works-list-item .actions {
         display: flex;
-        justify-content: center;
-        align-items: center; }
-      .works-list-item .actions .like, .works-list-item .actions .more {
-        margin-bottom: 10px; }
-    .works-list-item .example {
-      object-fit: cover; }
-    .works-list-item:hover .works-list-data {
-      opacity: 0; }
-    .works-list-item:hover .actions {
-      opacity: 1; }
-  .works-list-data {
-    align-self: flex-end;
-    position: absolute;
-    bottom: 20px;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 250px;
-    opacity: 1;
-    transition: .5s; }
-    .works-list-data .info {
+        flex-direction: column;
+        opacity: 0;
+        transition: .5s;
+        align-self: center;
+        position: absolute; }
+        .works-list-item .actions .like, .works-list-item .actions .more, .works-list-item .actions .chain {
+          border: none;
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          background-color: #02baab;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        .works-list-item .actions .like, .works-list-item .actions .more {
+          margin-bottom: 10px; }
+      .works-list-item .example {
+        object-fit: cover; }
+      .works-list-item:hover .works-list-data {
+        opacity: 0; }
+      .works-list-item:hover .actions {
+        opacity: 1; }
+    .works-list-data {
+      align-self: flex-end;
+      position: absolute;
+      bottom: 20px;
+      z-index: 1;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start; }
-      .works-list-data .info-title {
-        color: #fff;
-        font: 300 14px Oxygen, Helvetica, Georgia, sans-serif;
-        margin: 0 0 5px !important; }
-      .works-list-data .info-category {
-        color: #02baab;
-        font: 300 11px Oxygen, Helvetica, Georgia, sans-serif;
-        margin: 0 !important; }
-    .works-list-data .likes {
-      display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: flex-end;
-      color: #02baab;
-      font: 300 11px Oxygen, Helvetica, Georgia, sans-serif; }
-      .works-list-data .likes::before {
-        content: "";
-        background: url("../../img/likes.png");
-        display: block;
-        width: 14px;
-        height: 12px;
-        margin-bottom: 5px; }
+      width: 250px;
+      opacity: 1;
+      transition: .5s; }
+      .works-list-data .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; }
+        .works-list-data .info-title {
+          color: #fff;
+          font: 300 14px Oxygen, Helvetica, Georgia, sans-serif;
+          margin: 0 0 5px !important; }
+        .works-list-data .info-category {
+          color: #02baab;
+          font: 300 11px Oxygen, Helvetica, Georgia, sans-serif;
+          margin: 0 !important; }
+      .works-list-data .likes {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        color: #02baab;
+        font: 300 11px Oxygen, Helvetica, Georgia, sans-serif; }
+        .works-list-data .likes::before {
+          content: "";
+          background: url("../../img/likes.png");
+          display: block;
+          width: 14px;
+          height: 12px;
+          margin-bottom: 5px; }
   .works .control {
     margin-bottom: 75px; }
     .works .control button {
@@ -591,9 +593,6 @@ a, button {
         margin-top: 30px; } }
   .blog-list {
     margin-top: 60px; }
-    @media (max-width: 991px) {
-      .blog-list {
-        margin-top: 0; } }
     .blog-list li {
       display: flex;
       flex-direction: column; }
@@ -1127,13 +1126,8 @@ a, button {
 ul {
   margin-bottom: 0; }
 
-.blog-list {
-  margin-top: 0; }
-  .blog-list-item {
-    margin-bottom: 30px; }
-
-.blog-border {
-  margin-top: 0; }
+.blog-list-item {
+  margin-bottom: 30px; }
 
 .pagination .page-link {
   border: none;
@@ -1452,6 +1446,115 @@ ul {
   .content-sidebar .tag-cloud-link {
     font: 300 12px Oxygen, Helvetica, Georgia, sans-serif;
     color: #02baab; }
+
+.fixed-header-tool {
+  color: #85939f;
+  font: 300 11px Oxygen, Helvetica, Georgia, sans-serif;
+  display: flex;
+  align-items: center; }
+  @media (max-width: 767px) {
+    .fixed-header-tool {
+      font-size: 0; } }
+  .fixed-header-tool:hover {
+    text-decoration: none;
+    color: #85939f; }
+  .fixed-header-tool.account::before {
+    content: "";
+    background: url("../../img/login-icon.png");
+    width: 14px;
+    height: 13px;
+    margin: 0 5px 0 30px; }
+    @media (max-width: 767px) {
+      .fixed-header-tool.account::before {
+        margin: 0 5px 0 10px; } }
+  .fixed-header-tool.wishlist::before {
+    content: "";
+    background: url("../../img/wishlist.png");
+    width: 15px;
+    height: 13px;
+    margin: 0 5px 0 30px; }
+    @media (max-width: 767px) {
+      .fixed-header-tool.wishlist::before {
+        margin: 0 5px 0 10px; } }
+  .fixed-header-tool.logout::before {
+    content: "";
+    background: url("../../img/logout.png");
+    width: 12px;
+    height: 13px;
+    margin: 0 5px 0 30px; }
+    @media (max-width: 767px) {
+      .fixed-header-tool.logout::before {
+        margin: 0 5px 0 10px; } }
+  .fixed-header-tool.basket {
+    font-size: 12px; }
+    @media (max-width: 767px) {
+      .fixed-header-tool.basket {
+        font-size: 0; } }
+    .fixed-header-tool.basket::after {
+      content: "";
+      background: url("../../img/basket.png");
+      width: 17px;
+      height: 14px;
+      margin-left: 5px; }
+
+.works.grid {
+  background-color: #fff;
+  padding: 50px 0 100px; }
+
+.works-data {
+  font: 300 14px/24px Oxygen, Helvetica, Georgia, sans-serif;
+  color: #3b4954;
+  padding: 0 30px; }
+  @media (max-width: 991px) {
+    .works-data {
+      padding: 0; } }
+
+.works-list {
+  margin-bottom: 50px; }
+  .works-list-item {
+    margin-bottom: 30px; }
+
+.works .filters {
+  margin: 40px 0 25px;
+  align-self: flex-start;
+  padding: 0 30px; }
+  @media (max-width: 991px) {
+    .works .filters {
+      padding: 0;
+      align-self: center; } }
+  .works .filters-item {
+    margin-right: 10px;
+    border-top: 5px solid #fff; }
+    .works .filters-item:last-of-type {
+      margin-right: 0; }
+    .works .filters-item:hover {
+      border-top: 5px solid #eee; }
+      .works .filters-item:hover .filters-link {
+        text-decoration: none;
+        color: #3b4954; }
+  .works .filters-link {
+    color: #02baab;
+    font: 300 14px Oxygen, Helvetica, Georgia, sans-serif; }
+    @media (max-width: 575px) {
+      .works .filters-link {
+        font-size: 12.5px; } }
+
+.works-more {
+  background-color: transparent;
+  border: none;
+  color: #02baab;
+  font: 300 12px Oxygen, Helvetica, Georgia, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .works-more::after {
+    content: "\f0d7";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    margin-top: 5px; }
 
 /*.App {
   text-align: center;

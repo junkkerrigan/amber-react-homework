@@ -4,6 +4,8 @@ import search from '../../img/search-button.png';
 
 import mainLogo from '../../img/main-logo.png';
 
+import searchButton from '../../img/search-button.png';
+
 class SearchForm extends Component {
     render() {
         return (
@@ -34,19 +36,33 @@ class Sign extends Component {
     }
 }
 
-
-class Header extends Component {
+class SignedComp extends Component {
     render() {
-        return (
-            <div className="fixed-header-header">
+        return  (
+            <div className="container d-flex justify-content-between align-items-center">
 
-                <div className="container d-flex justify-content-between align-items-center">
+                <div className="tools d-flex align-items-center">
 
-                    <SearchForm/>
+                    <form action="#" method="get" name="search-form"
+                          className="fixed-header-search d-flex align-items-center">
 
-                    <Sign/>
+                        <input name="search-field" placeholder="Search" />
+
+                            <button type="button" name="search">
+                                <img src={searchButton} />
+                            </button>
+
+                    </form>
+
+                    <a href="#" className="fixed-header-tool account">Account</a>
+
+                    <a href="#" className="fixed-header-tool wishlist">Wishlist</a>
+
+                    <a href="#" className="fixed-header-tool logout">Log out</a>
 
                 </div>
+
+                <a href="#" className="fixed-header-tool basket">26 items in Cart</a>
 
             </div>
         );
@@ -118,7 +134,28 @@ class FixedHeader extends Component {
         return (
             <header className="fixed-top fixed-header">
 
-                <Header/>
+                <div className="fixed-header-header">
+
+                    {
+                        (this.props.page==='/portfolio-grid')?
+
+                            <div className="container d-flex justify-content-between align-items-center">
+
+                                <SignedComp/>
+
+                            </div>
+                            :
+
+                            <div className="container d-flex justify-content-between align-items-center">
+
+                                <SearchForm/>
+
+                                <Sign/>
+
+                            </div>
+                    }
+
+                </div>
 
                 <div className="fixed-header-bg d-flex justify-content-center">
 

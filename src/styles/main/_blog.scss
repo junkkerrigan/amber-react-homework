@@ -26,10 +26,6 @@
 
     margin-top: 60px;
 
-    @media (max-width: $lg) {
-      margin-top: 0;
-    }
-
     li {
       display: flex;
       flex-direction: column;

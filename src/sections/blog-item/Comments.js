@@ -40,7 +40,7 @@ class Form extends Component {
 class CommentItem extends Component {
     render() {
         return (
-            <li className="ocomments-item">
+            <li className={`ocomments-item ${(this.props.isAnswer==='yes')? 'answer' : ''}`}>
 
                 <button type="button" className="ocomments-reply">
                     Reply
@@ -100,6 +100,11 @@ class Comments extends Component {
               'Small batch sartorial, single-origin coffee food truck tousled sed swag hella synth bitters next level consectetur Helvetica twee. Craft beer ea tofu sint reprehenderit cornhole, occaecat put a bird on it single-origin coffee Tonx. Small batch 3 wolf moon ad, adipisicing fap cornhole.',
               'Small batch sartorial, single-origin coffee food truck tousled sed swag hella synth bitters next level consectetur Helvetica twee. Craft beer ea tofu sint reprehenderit cornhole, occaecat put a bird on it single-origin coffee Tonx. Small batch 3 wolf moon ad, adipisicing fap cornhole.',
               'Small batch sartorial, single-origin coffee food truck tousled sed swag hella synth bitters next level consectetur Helvetica twee. Craft beer ea tofu sint reprehenderit cornhole, occaecat put a bird on it single-origin coffee Tonx. Small batch 3 wolf moon ad, adipisicing fap cornhole.'
+          ],
+          isAns: [
+              'no',
+              'yes',
+              'no'
           ]
         };
     }
@@ -121,7 +126,7 @@ class Comments extends Component {
                                 map(this.state.author, (item, index) => {
                                     return <CommentItem author={item}
                                     date={this.state.date[index]} time={this.state.time[index]}
-                                    txt={this.state.text[index]}/>
+                                    txt={this.state.text[index]} isAnswer={this.state.isAns[index]}/>
                                 })
                             }
 

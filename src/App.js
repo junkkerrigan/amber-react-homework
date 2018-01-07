@@ -39,6 +39,7 @@ import Comments from "./sections/blog-item/Comments";
 import { Router, Route } from 'react-router-dom'
 
 import createBrowserHistory from 'history/createBrowserHistory';
+import PortfolioGrid from "./sections/portfolio-grid/PortfolioGrid";
 
 const curHistory=createBrowserHistory();
 
@@ -49,13 +50,20 @@ class App extends Component {
 
             <div>
 
-                <Route path='/' component={FixedHeader}/>
+                <Route exact path='/' component={FixedHeader}/>
+
+                <Route path='/:page' render={ () => <FixedHeader />}/>
 
                 <Route exact path='/blog-grid' render={ () => <SubpageHeader
                 title='Blog grid view'/>} />
 
                 <Route strict path='/blog-grid/' render={ () => <SubpageHeader
                     title='Blog post title goes here'/>} />
+
+                <Route strict path='/portfolio-grid' render={ () => <SubpageHeader
+                    title='Portfolio grid gallery'/>} />
+
+                <Route strict path='/portfolio-grid' component={PortfolioGrid} />
 
                 <Route strict path='/blog-grid/' render={ () =>
 

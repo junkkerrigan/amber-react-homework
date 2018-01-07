@@ -1,0 +1,156 @@
+.fixed-header {
+
+  &-tool {
+    color: #85939f;
+    font: 300 11px $font;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $md) {
+      font-size: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: #85939f;
+    }
+
+    &.account::before {
+      content: "";
+      background: url("../../img/login-icon.png");
+      width: 14px;
+      height: 13px;
+      margin: 0 5px 0 30px;
+
+      @media (max-width: $md) {
+        margin: 0 5px 0 10px;
+      }
+    }
+
+    &.wishlist::before {
+      content: "";
+      background: url("../../img/wishlist.png");
+      width: 15px;
+      height: 13px;
+      margin: 0 5px 0 30px;
+
+      @media (max-width: $md) {
+        margin: 0 5px 0 10px;
+      }
+    }
+
+    &.logout::before {
+      content: "";
+      background: url("../../img/logout.png");
+      width: 12px;
+      height: 13px;
+      margin: 0 5px 0 30px;
+
+      @media (max-width: $md) {
+        margin: 0 5px 0 10px;
+      }
+    }
+
+    &.basket {
+      font-size: 12px;
+
+      @media (max-width: $md) {
+        font-size: 0;
+      }
+
+      &::after {
+        content: "";
+        background: url("../../img/basket.png");
+        width: 17px;
+        height: 14px;
+        margin-left: 5px;
+      }
+    }
+
+  }
+}
+
+.works {
+
+  &.grid {
+  background-color: $white;
+  padding: 50px 0 100px;}
+
+  &-data {
+    font: 300 14px/24px $font;
+    color: $h-light-font;
+    padding: 0 30px;
+
+    @media (max-width: $lg) {
+      padding: 0;
+    }
+  }
+
+  &-list {
+    margin-bottom: 50px;
+
+    &-item {
+      margin-bottom: 30px;
+    }
+  }
+
+  .filters {
+
+    margin: 40px 0 25px;
+    align-self: flex-start;
+    padding: 0 30px;
+
+    @media (max-width: $lg) {
+      padding: 0;
+      align-self: center;
+    }
+
+    &-item {
+      margin-right: 10px;
+      border-top: 5px solid $white;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &:hover {
+        border-top: 5px solid $sep-light-bg;
+
+        .filters-link {
+          text-decoration: none;
+          color: $h-light-font;
+        }
+      }
+    }
+
+    &-link {
+      color: $main-green;
+      font: 300 14px $font;
+
+      @media (max-width: $sm) {
+        font-size: 12.5px;
+      }
+    }
+
+  }
+
+  &-more {
+    background-color: transparent;
+    border: none;
+    color: $main-green;
+    font: 300 12px $font;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::after {
+      content: "\f0d7";
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      display: block;
+      margin-top: 5px;
+    }
+  }
+}

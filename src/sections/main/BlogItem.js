@@ -21,7 +21,7 @@ class BlogItem extends Component {
 
                         <div className="blog-list-full">
 
-                            <a href="blog-grid/item" className="learn-more">Learn more</a>
+                            <a href="blog-grid/items" className="learn-more">Learn more</a>
 
                             <span className="blog-list-comments">
                                 <i className="fa fa-comments"/>
