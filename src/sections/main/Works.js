@@ -21,7 +21,8 @@ class WorksList extends Component {
 
                 {
                     map(this.props.worksData, (item,index) => {
-                        return <WorkItem imgSrc={item.image} workTitle={item.name} category={item.category}/>
+                        return <WorkItem dir='/portfolio-grid' imgSrc={item.image} workTitle={item.name}
+                                         category={item.category}/>
                     })
                 }
 

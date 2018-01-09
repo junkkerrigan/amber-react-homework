@@ -36,10 +36,12 @@ import Sidebar from "./sections/blog-item/Sidebar";
 
 import Comments from "./sections/blog-item/Comments";
 
+import PortfolioGrid from "./sections/portfolio-grid/PortfolioGrid";
+
 import { Router, Route } from 'react-router-dom'
 
 import createBrowserHistory from 'history/createBrowserHistory';
-import PortfolioGrid from "./sections/portfolio-grid/PortfolioGrid";
+import SingleWork from "./sections/portfolio-single/SingleWork";
 
 const curHistory=createBrowserHistory();
 
@@ -50,9 +52,7 @@ class App extends Component {
 
             <div>
 
-                <Route exact path='/' component={FixedHeader}/>
-
-                <Route path='/:page' render={ () => <FixedHeader />}/>
+                <Route path='/' component={FixedHeader}/>
 
                 <Route exact path='/blog-grid' render={ () => <SubpageHeader
                 title='Blog grid view'/>} />
@@ -60,10 +60,15 @@ class App extends Component {
                 <Route strict path='/blog-grid/' render={ () => <SubpageHeader
                     title='Blog post title goes here'/>} />
 
-                <Route strict path='/portfolio-grid' render={ () => <SubpageHeader
+                <Route strict path='/portfolio-grid/' render={ () => <SubpageHeader
+                    title='Blog post title goes here'/>} />
+
+                <Route strict path='/portfolio-grid/' component={SingleWork}/>
+
+                <Route exact path='/portfolio-grid' render={ () => <SubpageHeader
                     title='Portfolio grid gallery'/>} />
 
-                <Route strict path='/portfolio-grid' component={PortfolioGrid} />
+                <Route exact path='/portfolio-grid' component={PortfolioGrid} />
 
                 <Route strict path='/blog-grid/' render={ () =>
 

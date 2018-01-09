@@ -1,0 +1,174 @@
+.swork {
+
+  padding: 50px 0 100px;
+  display: flex;
+  justify-content: center;
+
+  &-img {
+
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    &-control {
+      position: absolute;
+      padding: 10px 15px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white;
+      border: none;
+      top: calc(50% - 18px);
+
+      i {
+        color: #ffae00;
+      }
+
+      &:hover {
+        background-color: #ffae00;
+
+        i {
+          color: $white;
+        }
+      }
+
+      &.prev {
+        left: 40px;
+      }
+
+      &.next {
+        right: 40px;
+      }
+
+      &.outline {
+        display: inline;
+        border: 2px solid #f5f5f6;
+        position: absolute;
+        top: 0!important;
+        &.next {
+          left: 40px!important;
+        }
+        &.prev {
+          left: 0!important;
+        }
+        padding: 6px 15px 8px;
+
+        &:hover {
+          background-color: $white;
+          border: 2px solid #ffae00;
+
+          i {
+            color: #ffae00;
+          }
+        }
+
+        @media (max-width: $lg) {
+          display: none!important;
+        }
+
+      }
+
+    }
+
+  }
+
+  &-likes {
+    color: #555;
+    font: 300 14px $font;
+    display: block;
+    margin-top: 50px;
+
+    &::before {
+      content: "\f004";
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      color: #c3c3c3;
+      margin-right: 10px;
+    }
+  }
+
+  &-tags {
+    flex-wrap: wrap;
+    margin: 30px 0;
+
+    &-item {
+
+      &::after {
+        content: ",";
+        margin-right: 5px;
+        color: #ffc600;
+        font: 300 14px $font;
+      }
+
+      &:last-of-type::after {
+        content: "";
+      }
+    }
+
+    &-link {
+      color: #ffc600;
+      font: 300 14px $font;
+
+      &:hover {
+        color: #ffc600;
+        text-decoration: none;
+      }
+    }
+
+  }
+
+  &-description {
+    font: 300 14px/24px $font;
+    color: $h-light-font;
+    margin-bottom: 40px;
+    max-width: 200px;
+
+    &.title {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-checkboxes {
+
+    margin-bottom: 50px;
+
+    &-item {
+
+      font: 300 14px/24px $font;
+      color: $h-light-font;
+      margin-bottom: 15px;
+
+      &::before {
+        content: "\f046";
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        color: #ffae00;
+        margin-right: 10px;
+      }
+    }
+
+  }
+
+  &-buy {
+    @include make-button(25px, 15px);
+    border: 2px solid #ffae00;
+    color: #ffae00;
+
+    &:hover {
+      background-color: #ffae00;
+      border: 2px solid #ffae00;
+      text-decoration: none;
+      color: $white;
+    }
+  }
+
+}

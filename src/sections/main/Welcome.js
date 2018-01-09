@@ -10,61 +10,17 @@ import bg4 from '../../img/bg-4.jpg';
 
 import bg5 from '../../img/bg-5.jpg';
 
-class Carousel extends Component {
-    render() {
-        return (
-            <div id={this.props.id} className="carousel slide" data-ride="carousel">
-                <ol className="carousel-indicators">
-                    <li data-target={`#${this.props.id}`} data-slide-to="0" className="active"></li>
-                    <li data-target={`#${this.props.id}`} data-slide-to="1"></li>
-                    <li data-target={`#${this.props.id}`} data-slide-to="2"></li>
-                    <li data-target={`#${this.props.id}`} data-slide-to="3"></li>
-                    <li data-target={`#${this.props.id}`} data-slide-to="4"></li>
-                </ol>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img className="d-block w-100" src={bg1} alt="First slide"/>
-                    </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src={bg2} alt="Second slide"/>
-                    </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src={bg3} alt="Third slide"/>
-                    </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src={bg4} alt="Fourth slide"/>
-                    </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src={bg5} alt="Fifth slide"/>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
-
-/*class Title extends Component {
-    render() {
-        return (
-            <h2 className={this.props.cls}>{this.props.txt}</h2>
-        );
-    }
-}
-
-class Link extends Component {
-    render() {
-        return (
-            <a href="#" className="btn btn-outline-primary welcome-button">{this.props.txt}</a>
-        );
-    }
-}*/
+import Carousel from './Carousel';
 
 class Welcome extends Component {
+
     render() {
+
+        const images=[bg1, bg2, bg3, bg4, bg5];
         return (
             <section id="home" className="welcome d-flex align-items-center text-center">
 
-                <Carousel id='welcomeCarousel'/>
+                <Carousel slidesNum={5} id='welcomeCarousel' imgDir={images}/>
 
                 <div className="container d-flex flex-column align-items-center">
 

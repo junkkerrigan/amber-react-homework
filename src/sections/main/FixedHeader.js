@@ -137,13 +137,14 @@ class FixedHeader extends Component {
                 <div className="fixed-header-header">
 
                     {
-                        (this.props.page==='/portfolio-grid')?
+                        (this.props.location.pathname==='/portfolio-grid')?
 
                             <div className="container d-flex justify-content-between align-items-center">
 
                                 <SignedComp/>
 
                             </div>
+
                             :
 
                             <div className="container d-flex justify-content-between align-items-center">

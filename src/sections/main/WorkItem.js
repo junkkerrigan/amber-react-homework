@@ -39,7 +39,7 @@ class WorkItemActions extends Component {
                     <img src={like}/>
                 </button>
 
-                <a href="/portfolio-grid/item" className="more">
+                <a href={this.props.dir} className="more">
                     <img src={more}/>
                 </a>
 
@@ -61,7 +61,7 @@ class WorkItem extends Component {
 
                 <WorkItemData workTitle={this.props.workTitle} category={this.props.category}/>
 
-                <WorkItemActions/>
+                <WorkItemActions dir={this.props.dir}/>
 
             </li>
         );

@@ -115,7 +115,8 @@ class PortfolioGrid extends Component {
 
                         {
                             map(this.state.itemData, (item, index) => {
-                                return <WorkItem imgSrc={item.image} workTitle={item.name} category={item.category}/>
+                                return <WorkItem dir='/portfolio-grid/item' imgSrc={item.image} workTitle={item.name}
+                                                 category={item.category}/>
                             })
                         }
 
