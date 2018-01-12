@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import map from '../../img/map.png'
+import map from '../img/map.png'
 
 class TouchItem extends Component {
     render() {

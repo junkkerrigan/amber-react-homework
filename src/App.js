@@ -2,55 +2,64 @@ import React, { Component } from 'react';
 
 import './styles/main/App.css';
 
-import FixedHeader from './sections/main/FixedHeader';
+import SubpageHeader from "./components/SubpageHeader";
 
-import Welcome from './sections/main/Welcome';
+import BlogSingle from "./components/pages/BlogSingle";
 
-import Steal from "./sections/main/Steal";
+import MainLayout from './components/MainLayout';
 
-import Works from "./sections/main/Works";
+import PortfolioGrid from "./components/pages/PortfolioGrid";
 
-import Amber from "./sections/main/Amber";
+import SingleWork from "./components/pages/SingleWork";
 
-import Features from "./sections/main/Features";
+import MainPage from './components/pages/MainPage';
 
-import Quote from "./sections/main/Quote";
+import BlogGrid from './components/pages/BlogGrid';
 
-import Blog from "./sections/main/Blog";
+import FixedHeader from "./components/FixedHeader";
 
-import Progress from "./sections/main/Progress";
-
-import Team from "./sections/main/Team";
-
-import Footer from "./sections/main/Footer";
-
-import SubpageHeader from "./sections/blog-grid/SubpageHeader";
-
-import BlogGridMain from "./sections/blog-grid/BlogGridMain";
-
-import RelatedPosts from "./sections/blog-item/RelatedPosts";
-
-import Article from "./sections/blog-item/Article";
-
-import Sidebar from "./sections/blog-item/Sidebar";
-
-import Comments from "./sections/blog-item/Comments";
-
-import PortfolioGrid from "./sections/portfolio-grid/PortfolioGrid";
+import Footer from "./components/Footer";
 
 import { Router, Route } from 'react-router-dom'
 
-import createBrowserHistory from 'history/createBrowserHistory';
-import SingleWork from "./sections/portfolio-single/SingleWork";
+import createBrowserHistory from '../node_modules/history/createBrowserHistory';
 
-const curHistory=createBrowserHistory();
+const customHistory=createBrowserHistory();
 
 class App extends Component {
   render() {
     return (
-        <Router history={curHistory}>
+        <Router history={customHistory}>
 
             <div>
+
+            <Route component={FixedHeader}/>
+
+            <Route exact path='/' component={MainPage} />
+
+            <Route component={SubpageHeader} />
+
+            <Route exact path='/blog-grid' component={BlogGrid} />
+
+            <Route path='/blog-grid/item' component={BlogSingle} />
+
+            <Route exact path='/portfolio-grid' component={PortfolioGrid} />
+
+            <Route path='/portfolio-grid/item' component={SingleWork} />
+
+            <Route component={Footer}/>
+
+            </div>
+
+        </Router>
+    );
+  }
+}
+
+export default App;
+
+
+/*<div>
 
                 <Route path='/' component={FixedHeader}/>
 
@@ -121,15 +130,7 @@ class App extends Component {
 
                 <Route path='/' component={Footer}/>
 
-            </div>
-
-        </Router>
-    );
-  }
-}
-
-export default App;
-
+            </div>*/
 
 
 

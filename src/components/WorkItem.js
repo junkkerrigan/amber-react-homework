@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import like from '../../img/action-like.png';
+import like from '../img/action-like.png';
 
-import more from '../../img/action-more.png';
+import more from '../img/action-more.png';
 
-import chain from '../../img/action-chain.png';
+import chain from '../img/action-chain.png';
 
 class WorkItemData extends Component {
     render() {

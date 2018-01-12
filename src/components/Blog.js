@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import work1 from '../../img/work-1.jpg'
+import work1 from '../img/work-1.jpg'
 
-import work2 from '../../img/work-2.jpg'
+import work2 from '../img/work-2.jpg'
 
-import work3 from '../../img/work-3.jpg'
+import work3 from '../img/work-3.jpg'
 
 import BlogItem from './BlogItem';
 

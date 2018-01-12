@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import map from 'lodash/map'
 
-import latestWork from '../../img/blog-single-img-2.jpg';
+import latestWork from '../img/blog-single-img-2.jpg';
 
 class SidebarCategory extends Component {
     render() {

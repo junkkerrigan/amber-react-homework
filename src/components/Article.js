@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
-import mainImage from '../../img/blog-single-main.jpg';
+import mainImage from '../img/blog-single-main.jpg';
 
-import contentImage from '../../img/blog-single-img.jpg';
+import contentImage from '../img/blog-single-img.jpg';
 
 import map from 'lodash/map'
 

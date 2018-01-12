@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 import WorkItem from './WorkItem';
 
-import work1 from '../../img/work-1.jpg';
+import work1 from '../img/work-1.jpg';
 
-import work2 from '../../img/work-2.jpg';
+import work2 from '../img/work-2.jpg';
 
-import work3 from '../../img/work-3.jpg';
+import work3 from '../img/work-3.jpg';
 
-import back from '../../img/back.png';
+import back from '../img/back.png';
 
-import forward from '../../img/forward.png';
+import forward from '../img/forward.png';
 
 import map from 'lodash/map';
 

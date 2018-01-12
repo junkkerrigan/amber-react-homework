@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import development from '../../img/development.png';
-import results from '../../img/results.png';
-import military from '../../img/military.png';
+import development from '../img/development.png';
+import results from '../img/results.png';
+import military from '../img/military.png';
 
 class ProgressItem extends Component {
     render() {

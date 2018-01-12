@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Carousel from '../main/Carousel';
+import Carousel from '../Carousel';
 
 import map from 'lodash/map';
 

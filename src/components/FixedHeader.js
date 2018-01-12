@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import search from '../../img/search-button.png';
+import search from '../img/search-button.png';
 
-import mainLogo from '../../img/main-logo.png';
+import mainLogo from '../img/main-logo.png';
 
-import searchButton from '../../img/search-button.png';
+import searchButton from '../img/search-button.png';
 
 class SearchForm extends Component {
     render() {

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-import bg1 from '../../img/bg-1.jpg';
+import bg1 from '../img/bg-1.jpg';
 
-import bg2 from '../../img/bg-2.jpg';
+import bg2 from '../img/bg-2.jpg';
 
-import bg3 from '../../img/bg-3.jpg';
+import bg3 from '../img/bg-3.jpg';
 
-import bg4 from '../../img/bg-4.jpg';
+import bg4 from '../img/bg-4.jpg';
 
-import bg5 from '../../img/bg-5.jpg';
+import bg5 from '../img/bg-5.jpg';
 
 import Carousel from './Carousel';
 

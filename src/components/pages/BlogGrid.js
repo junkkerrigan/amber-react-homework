@@ -6,7 +6,7 @@ import work2 from '../../img/work-2.jpg'
 
 import work3 from '../../img/work-3.jpg'
 
-import BlogItem from '../main/BlogItem';
+import BlogItem from '../BlogItem';
 
 import map from 'lodash/map';
 
@@ -20,7 +20,7 @@ class PaginationItem extends Component {
     }
 }
 
-class BlogGridMain extends Component {
+class BlogGrid extends Component {
     render() {
 
         const imageList = [
@@ -30,7 +30,7 @@ class BlogGridMain extends Component {
         ];
 
         const pageList = [
-          '1', '2', '3', '4', '5', '6', '7', '...', '2015'
+            '1', '2', '3', '4', '5', '6', '7', '...', '2015'
         ];
 
         return (
@@ -69,4 +69,4 @@ class BlogGridMain extends Component {
     }
 }
 
-export default BlogGridMain;
+export default BlogGrid;

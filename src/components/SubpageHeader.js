@@ -21,14 +21,23 @@ class SubpageHeader extends Component {
             'Shortcodes',
             'Typography',
             'Blog'
-        ];
+        ], title={
+            '/blog-grid': 'Blog grid view',
+            '/blog-grid/item':'Blog post title goes here',
+            '/portfolio-grid/item':'Blog post title goes here',
+            '/portfolio-grid':'Portfolio grid gallery'
+        };
 
+        const path=this.props.location.pathname;
+        console.log(path);
         return (
             <section className="main-header" id="blog-grid">
 
                 <div className="container">
 
-                    <h2 className="main-header-title">{this.props.title}</h2>
+                    <h2 className="main-header-title">
+                        {title[path]}
+                    </h2>
 
                     <div className="main-header-wrapper d-flex">
 

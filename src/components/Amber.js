@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import forward from '../../img/forward.png';
+import forward from '../img/forward.png';
 
 class Amber extends Component {
     render() {

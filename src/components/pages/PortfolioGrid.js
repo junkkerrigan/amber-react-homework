@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import map from 'lodash/map';
 
-import WorkItem from '../main/WorkItem';
+import WorkItem from '../WorkItem';
 
 import work1 from '../../img/work-1.jpg';
 
